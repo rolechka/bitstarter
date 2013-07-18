@@ -1,4 +1,4 @@
-
+<!-- http://ec2-54-213-32-230.us-west-2.compute.amazonaws.com:8080 -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,14 +10,22 @@
   <META NAME="ROBOTS" CONTENT="ALL">
 
     <title>Welcome to Video dance battles!</title>
-    <!-- mind this! -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="dance battles, dance, Dance Video, Hip-Hop, Contemporary, Jazz" />
+    <meta name="description" content="Dancing and entertainment portal. Be the judge of dance battles, vote for the video you like, get a random dance battles! Select existing or create new battles for the videos, which has not yet been battled." />
+    <meta http-equiv="Content-Language" content="en" />
 
     <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css">
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css">
     <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fsocial-buttons.css">    
     <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fjquery.js"></script>
     <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap.js"></script>
+    
+
+  <link rel='stylesheet' type='text/css' media='all'
+	  href="/static/css/vb.css" />
+	<script src="/static/js/site.js"></script>
+
     <link href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700,800" 
           rel="stylesheet" type="text/css">
@@ -110,147 +118,142 @@
   </head>
   <body>
 
-    <!-- Mobile-friendly navbar adapted from example. -->
-    <!-- http://twitter.github.io/bootstrap/examples/starter-template.html -->
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
-          <button type="button" class="btn btn-navbar"
-                  data-toggle="collapse" data-target=".nav-collapse">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" 
+          data-target=".nav-collapse">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand" href="#">Video dance battles</a>
+          <a class="brand active" href="/">Video dance battles</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
-               <li><a href="#all_video_search">All video, search</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li class="active"><a href="/">Home (battles)</a></li>
+  						<li class="divider-vertical"></li>							
+  						<li class=""><a href="/all_video">All video, search</a></li>
+  						<li class=""><a href="/all_battles">All battles</a></li>
+  							
+  						<li class="divider-vertical"></li>
+  						
+  						<li class="dropdown">
+  							<a href="#" class="dropdown-toggle " data-toggle="dropdown" id="lang">About                         	<b class="caret"></b></a>
+  							<ul class="dropdown-menu">
+  								<li class=""><a href="/about">About</a></li>
+  							  	<li class=""><a href="/add_my_video">Add my video</a></li>						
+  								<li class=""><a href="/leave_feedback">Feedback</a></li>												  
+  							</ul>	
+  						</li>																											
+					</ul>
+					
+					<ul class="nav pull-right">
+					  					 					
+              
+                      <li><a href="Javascript:doSettings()" class="red-nav">
+                      		<i class="icon-wrench icon-white"></i>&nbsp;&nbsp;Selection settings</a>
+                      </li>                  
+                                            
+                      <li class="divider-vertical"></li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle lang" data-toggle="dropdown" id="lang">english                         <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                          <li><a href="Javascript:SetLang('en')" class="lang">english</a></span></li>
+                          <li><a href="Javascript:SetLang('ru')" class="lang">russian</a></span></li>
+                        </ul>                        
+                      </li>
             </ul>
-          </div><!--/.nav-collapse -->
+          </div>
         </div>
       </div>
     </div>
-
-    <!-- We use row-fluid inside containers to achieve a resizable layout. -->
-    <!-- blogs.endjin.com/2013/04/tips-for-implementing-responsive-designs-using-bootstrap/ -->
-    <!-- http://stackoverflow.com/a/12270322 -->
-    <div class="container">
-      <!-- Font and paired font of .heading/.subheading and body from Google Fonts -->
-      <!-- www.google.com/fonts/specimen/Ubuntu -->
-      <!-- www.google.com/fonts/specimen/Ubuntu#pairings -->
-      <div class="row-fluid heading">
-        <div class="span12">
+   
+  <div class="container" id="page">
+      <div class="row" >
+        <div class="span12" id="main">
           <h1>Welcome to Video dance battles!</h1>
-        </div>
-      </div> 
-      <div class="row-fluid subheading">
-        <div class="span12">          
-        </div>
-      </div>
-      <div class="row-fluid pitch">
-        <div class="span5 offset1 video">
-          <img class="img-polaroid" src="http://placehold.it/480x300">
-        </div>
+          <span class="unSup"></span>
 
-        <div class="span5 actions">
-          <div class="span8 offset2">
-            <div class="statistics">
-              <div class="span4">
-                <!-- linediv-l and linediv-r give dividing lines that look
-                different in horizontal and vertical layouts, illustrating
-                media queries. -->
-                <div class="linediv-l">
-                <h3>1000</h3> <p>backers</p>
-                </div>
-              </div>
-              <div class="span4">
-                <div class="linediv-c">
-                  <h3>$6000</h3> <p>of $10,000</p>
-                </div>
-              </div>
-              <div class="span4">
-                <div class="linediv-r">
-                <h3>10</h3> <p>days left</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="span10 offset1">
-            <!-- Bootstrap progress bar -->
-            <!-- http://twitter.github.io/bootstrap/components.html#progress -->
-            <div class="thermometer progress active">
-              <div class="bar bar-success" style="width: 60%;"></div>
-              <div class="bar bar-warning" style="width: 40%;"></div>
-            </div>
-          </div>
-          <div class="span6 offset3 order">
-            <!-- Standard Bootstrap button. -->
-            <!-- http://twitter.github.io/bootstrap/base-css.html#buttons -->
-            <button class="btn btn-success btn-large">Preorder</button>
-          </div>
-          <div class="span8 offset2 social">
-            <!-- Social buttons are not included in default Bootstrap. -->
-            <!-- See: http://noizwaves.github.io/bootstrap-social-buttons -->
-            <button class="btn btn-twitter"><i class="icon-twitter"></i> | Twitter</button>
-            <button class="btn btn-facebook"><i class="icon-facebook"></i> | Facebook</button>
-          </div>
-        </div>
-      </div>
+					<!--Body content-->
 
-      <!-- Beyond this part the marketing copy begins. -->
-      <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/text-align -->
-      <!-- http://twitter.github.io/bootstrap/base-css.html#images -->
-      <!-- http://placehold.it -->
+					<h2>Battle	#<span id="b">{battle_id}</span><span id='bt'>{battle_name}</span> </h2> 
+					<!-- todo(2): add author and date  -->
+					<!--  <span class="mini_date">was opened {dt_begin} by {author}</span><br>  -->
+					
+
+
+					
+				
+				<!--END Body content-->
+		</div>
+      </div>  <!-- END id="main" -->
+      
       <div class="row-fluid section1">
-        <div class="span5 offset1 asset">
-          <img class="img-polaroid" src="http://placehold.it/480x300">
+        <div class="span6 asset">
+          <!-- VIDEO 1 -->
+          <div class="video_div" id="video_div1">
+						<span class="votes"><span id="votes1">{video1_votes}</span> {sVotes}</span><br>						
+						<div id="dv1">
+							<img class="video" src="http://placehold.it/480x300&text=Video1" id="v2" video_id={v1_id} class="video"">							
+							<br>
+						</div>
+						<div id="alert_placeholder1"></div>
+						
+						<span id="like1" class="btn btn-success btn-large" title="{sLike_this_more}"><i
+							class="icon-white icon-heart" "></i><span>&nbsp;&nbsp;&nbsp;{sLike_this_more}</span> 
+						</span> <span id="skip1"
+							class="btn btn-large" title="{sNext_random}"><span>{sNext_random}</span><i
+							class="icon-black icon-chevron-right"></i> </span>
+						<div id="info1"></div>
+						<span class="video_info">
+						<a href="http://www.youtube.com/watch?v={v2_site_id}?wmode=opaque&rel=0"
+							target="_blank" class="mt5"> <span class="video_title">{v1_name}</span>
+						</a><span class="video_descr">{v1_descr}</span></span>
+						<hr>
+						{sVideoTags}<br><span class="v_tags">{v1_tags}</span><br>
+						
+						<!-- 
+						<span class="video_place">{v1_place}</span><br>
+						<span class="video_choreography"><i>choreography</i>: <span>{v1_choreography}</span></span><br>
+						<span class="video_style"><i>style</i>: 	<span>{v1_style}</span></span><br>
+						<span class="video_dancers"><i>dancers</i>: <span>{v1_dancers}</span></span><br>  -->
+					</div>
         </div>
-        <div class="span5 copy">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            porta, dui sagittis hendrerit rutrum, nunc leo tempus nisl, eu
-            mollis justo velit at nunc. Fusce nec egestas sem. Donec
-            fringilla ante lectus, a pellentesque lacus dignissim ac. Sed
-            volutpat lorem ut congue malesuada. In facilisis scelerisque
-            turpis sed lacinia. Donec in orci lectus. Donec auctor semper
-            quam, eget rhoncus purus fringilla id. Phasellus id nibh eu
-            risus ultrices adipiscing.  Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. Donec porta, dui sagittis hendrerit
-            rutrum, nunc leo tempus nisl, eu mollis justo velit at
-            nunc. Fusce nec egestas sem. Donec fringilla.
-          </p>
+        <div class="span6 copy">
+          <!-- VIDEO 2 -->
+          <div class="video_div" id="video_div2">
+						<!--Sidebar content-->
+
+						<span class="votes"><span id="votes2">{video2_votes}</span> {sVotes}</span><br>						
+						<div id="dv2">
+							
+							<img class="video" src="http://placehold.it/480x300&text=Video2" id="v2" video_id={v2_id} class="video"">
+							<br>
+						</div>
+						<div id="alert_placeholder2"></div>
+						
+						<span id="like2" class="btn btn-info btn-large" title="{sLike_this_more}"> <i
+							class="icon-black icon-heart" "></i><span>&nbsp;&nbsp;&nbsp;{sLike_this_more}</span></span> 
+						<span id="skip2"
+							class="btn btn-large" title="{sNext_random}"><span>{sNext_random}</span><i
+							class="icon-white icon-chevron-right"></i> </span>
+						<div id="info2"></div>
+						<span class="video_info">
+						<a href="http://www.youtube.com/watch?v={v2_site_id}"
+							target="_blank" class="mt5"><span class="video_title">{v2_name}</span> </a>
+						<span class="video_descr">{v2_descr}</span></span>	
+						<hr>
+						{sVideoTags}<br><span class="v_tags">{v2_tags}</span><br>													
+					</div>
         </div>
       </div>
 
-      <div class="row-fluid section2">
-        <div class="span5 offset1 copy copy-right">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            porta, dui sagittis hendrerit rutrum, nunc leo tempus nisl, eu
-            mollis justo velit at nunc. Fusce nec egestas sem. Donec
-            fringilla ante lectus, a pellentesque lacus dignissim ac. Sed
-            volutpat lorem ut congue malesuada. In facilisis scelerisque
-            turpis sed lacinia. Donec in orci lectus. Donec auctor semper
-            quam, eget rhoncus purus fringilla id. Phasellus id nibh eu
-            risus ultrices adipiscing.  Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. Donec porta, dui sagittis hendrerit
-            rutrum, nunc leo tempus nisl, eu mollis justo velit at
-            nunc. Fusce nec egestas sem. Donec fringilla.
-          </p>
-        </div>
-        <div class="span5 asset">
-          <img class="img-polaroid" src="http://placehold.it/480x300">
-        </div>
-      </div>
-
+      
       <!-- For the FAQ, we introduce a little bit of JS, using the accordion. -->
       <!-- This brings in jquery.js and bootstrap.js as dependencies. -->
       <!-- http://twitter.github.io/bootstrap/javascript.html#collapse -->
       <div class="row-fluid faq">
-          <div class="span10 offset1">
+          <div class="span11 offset1">
             <h3>FAQ</h3>
             <div class="accordion" id="accordion2">
               <div class="accordion-group">
@@ -283,19 +286,14 @@
           </div>
 
       </div>
-
-      <!-- Not crucial, but we put this under a CC By-SA 3.0 license. -->
-      <!-- http://creativecommons.org/licenses/ -->
+      
+      
       <div class="row-fluid footer">
         <div class="span12">
-          <p>This work is licensed under
-            the <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC
-              By-SA 3.0
-            </a>, without all the cruft that would otherwise be
-            put at the bottom of the page.</p>
+         	Rolechka copyright© 2013 
         </div>
       </div>
-    </div>
+	</div>    
   </body>
 </html>
 
